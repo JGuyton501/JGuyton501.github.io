@@ -21,7 +21,7 @@
   float: right;
 
   position: relative;
-  left: -35%; 
+  left: -50%; 
   text-align: left;
 }
 .float_center > .child {
