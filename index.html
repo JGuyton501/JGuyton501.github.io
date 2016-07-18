@@ -1,29 +1,324 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Test Webpage</title>
-		<link rel="stylesheet" type="text/css" href="/css/main.cs">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/resume">Resume</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div>
-        		<h1>Hi there, this is a test webpage!</h1>
-				<p>This is a test to see if everything works fine. <a href="/about">Read more about me</a></p>
-    		</div>
-		</div>
-		<footer>
-    		<ul>
-        		<li><a href="mailto:guyton.justin@gmail.com">Email Me</a></li>
-        		<li><a href="https://github.com/JGuyton501">github.com/JGuyton501</a></li>
-			</ul>
-		</footer>
-	</body>
+<html ng-app="mainModule">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Justin Guyton</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="float:left"><img src="Images/jtg_icon.png" style="height:40px; width:40px;" alt="JTG"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav float_center" >
+                    <li>
+                        <a href="#about" title="About"><img src="Images/about_icon.png" style="height:40px; width:40px;" alt="About"></a>
+                    </li>
+                    <!-- <li>
+                        <a href="#projects">Portfolio</a>
+                    </li> -->
+                    <li>
+                        <a href="#resume" title="Resume"><img src="Images/resume_icon.png" style="height:40px; width:40px;" alt="Resume"></a>
+                    </li>
+                    <!-- <li>
+                        <a href="#contact">Contact</a>
+                    </li> -->
+                    <li>
+                        <a href="#connect" title="Connect"><img src="Images/connect_icon.png" style="height:40px; width:40px;" alt="Connect"></a>
+                    </li>
+                </ul>            
+            </div>
+
+
+
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Full Width Image Header -->
+    <header class="header-image">
+        <div class="headline">
+            <div class="container">
+                <h1>Justin Guyton</h1>
+                <h2>Full Stack Web Developer</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+            <hr class="featurette-divider">
+            <br>
+            <br>
+            <img class="featurette-image img-circle pull-left" src="Images/profile_pic.jpg">
+            <div class="sectionTitle">
+                <h2>About Me</h2>
+            </div>
+            <p class="lead">
+            <b>College:</b> Washington University in St Louis <br>
+            <b>Degree program:</b> Bachelor of Science in Computer Science (BSCS) <br>
+            <b>Hometown: </b> Little Rock, Arkansas <br>
+            </p>
+
+            <p class="lead"> I am a developer and entrepreneur at heart. I enjoy continuous learning and my lifestyle is not bounded to nine to five. Upon coming to college, I discovered my passion for web development. I immediately followed my passion to web development internships, the creation of websites for family and friends and freelancing. When I am not developing websites, you will catch me either playing either video games or pool. </p>
+        </div>
+
+        <!-- Second Featurette -->
+        <div class="featurette" id="resume">
+        <hr class="featurette-divider">
+            <div class="sectionTitle">
+                <h2>Resume</h2>
+            </div>
+
+            <div class="row resume_row">
+                <div id="columns">
+                    <div class = "left column">
+                        <p >
+                            <strong>EDUCATION </strong>  
+                        </p>
+                    </div>
+                    <div class = "right column">
+                        <p>
+                            <strong>Washington University in St Louis</strong><br>
+                            Bachelor of Computer Science, Class of 2018
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row resume_row">
+                <div id="columns">
+                    <div class = "left column">
+                        <p >
+                            <strong>WORK <br>EXPERIENCE  </strong>  
+                        </p>
+                    </div>
+                    <div class = "right column">
+                        <p> 
+                            <strong>Application Developer Intern</strong> - Principal Financial Group<br>
+                            <em>Des Moines, Iowa</em> - May 2016 - Present<br>
+							<ul>
+								<li>Integrate to a Spring framework and Agile development environment on a team of full-time employees</li>
+								<li>Assist with web development projects (coding, content management interactive web design, etc.) using languages HTML, CSS, JavaScript, and Dust.js </li>
+								<li>Create and support software application through analysis, coding, testing, debugging, implementation and/maintenance using Java </li>
+							</ul>
+                        </p>
+                        <p> 
+                            <strong>Front-End Web Developer Supervisor</strong> - SuperInterns.com<br>
+                            <em>Virtual</em> - May 2016 - Present<br>
+                            <ul>
+								<li>Supervise a web design team of 8 virtual interns saving the company over $24,000 in labor cost</li>
+								<li>Design and developed webpages meeting on business requirements using HTML, CSS, JavaScript, WordPress, and Bootstrap</li>
+								<li>Assist in building a sandbox environment to prevent untested code from going into production</li>
+								<li>Occasionally lead weekly Supervisor, IT, and Web Designer team meetings consisting of approximately 10 individuals</li>
+								<li>Identified current issues with the company&rsquo;s site and collaborated with supervisors to resolve the issues to increase the user experience</li>
+							</ul>
+                        </p>
+                        <p> 
+                            <strong>Student Technician</strong> - Student Technology Services, Washington University<br>
+                            <em>St Louis, Missouri</em> - January 2015 - Present<br>
+                            <ul>
+								<li>Troubleshoot computer viruses, hard drive corruption, hard drive failure, wireless network issues, and other personal computer problems of the Washington University students and staff</li>
+							</ul>
+                        </p>
+                        <p> 
+                            <strong>Data Analyst Intern</strong> - Office of Provost, Washington University<br>
+                            <em>St Louis, Missouri</em> - May 2016 - Present<br>
+                            <ul>
+								<li>Collected and interpreted publicly available data from NSF, NIH, DARPA, and DoD</li>
+								<li>Built a data clustering web application to a analyze the geolocations of a variety awards</li>
+								<li>Analyzed data gathered from the Association of American Universities peer institutions to aid in developing a new Learning Management System for the university</li>
+							</ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row resume_row">
+                <div id="columns">
+                    <div class="left column">
+                        <p >
+                            <strong>LEADERSHIP<br>AND VOLUNTEER  </strong>  
+                        </p>
+                    </div>
+                    <div class = "right column">
+                        <p> 
+                            <strong>Learning 2 Live Mentor</strong> - Washington University<br>
+                            <em>St Louis, Missouri</em> - September 2014 - Present<br>
+							<ul>
+								<li>Committed to guide, support, and befriend the students enrolled in the program to help them develop and reach positive academic, career, and personal goals</li>
+							</ul>
+                        </p>
+                        <p> 
+                            <strong>Mentor</strong> - College Access Mentoring<br>
+                            <em>Washington University</em> - September 2015 - Present<br>
+                            <ul>
+								<li>Paired with another WashU student meeting with 5 East St. Louis High School students once every week to mentor students based on a set curriculum assisting with professional growth and the college admission process</li>
+							</ul>
+                        </p>
+                        <p> 
+                            <strong>Mentor</strong> - Hands Up United<br>
+                            <em>St Louis Missouri</em> - July 2015 - August 2015<br>
+                            <ul>
+								<li>Assisted approximately 15 students in learning to code using HTML and CSS to develop a site for clients and themselves</li>
+							</ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row resume_row">
+                <div id="columns">
+                    <div class = "left column">
+                        <p >
+                            <strong>TECHNICAL <br> SKILLS </strong>  
+                        </p>
+                    </div>
+                    <div class = "right column">
+                        <p>
+                            <strong>Programming languages:</strong> Introductory - Java, JavaScript, HTML, CSS, Python, NI LabVIEW, VHDL<br>
+                            <strong>Applications/Skills/Platforms: </strong> Dust.js, Node.js, Django, Google Refine, Agile Methodologies<br>
+                           <strong>Operating Systems: </strong>Mac OS X, Windows
+                        </p>
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="row resume_row">
+                <div id="columns">
+                    <div class = "left column">
+                        <p >
+                            <strong>HONORS/AWARDS</strong>  
+                        </p>
+                    </div>
+                    <div class = "right column">
+                        <p>
+                            1st Place at GlobalHack IV <br>
+                            1st Place at NSBE Annual Hackathon <br>
+                            McKelvey 2014 Scholar
+                        </p>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+
+<!--         <p style="text-align: right;"><a href="#"> Click to View Resume in PDF format</a></p>
+ -->
+        
+
+        <!-- Second Featurette -->
+<!-- 		<div class="featurette" id="contact">
+        	<hr class="featurette-divider">
+        	<div class="sectionTitle">
+                <h2>Contact me today</h2>
+            </div>
+         	<div class="col-md-5">
+         		<p>Please feel free to reach out to me if you have any questions or comments . Also, you could always just send me a friendly hello.</p>
+         		<h4>Contact Information</h4>
+         		<p>Email: <a href="mailto:guyton.justin@gmail.com" target="_top">guyton.justin@gmail.com</a> </p>
+         	</div>
+         	<div class="col-md-7">
+	         	<form method="post" action="mailto:guyton.justin@gmail.com">
+		            <label>Full name: </label>
+		            <input type="text" name="name" required pattern="^[A-Za-z. ]{3,100}$" placeholder="Full name"/>
+		            <label>Email: </label>
+	           		<input type="email" name="email" required pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$"/><br>
+	           		<label>Message: </label>
+	           		<textarea name="visitorMessage" rows="3" cols="50"></textarea><br>
+	           		<button type="submit" value="Email This Form">Submit</button>
+	            </form>
+         	</div>
+        </div> -->
+
+        <!-- Third Featurette -->
+        <!-- Icon Sources 
+        https://www.iconfinder.com/icons/1147408/address_book_circle_contact_contacts_email_gmail_icon#size=128
+        https://www.iconfinder.com/icons/1147411/address_book_business_circle_contact_contacts_linkedin_icon#size=128
+        https://www.iconfinder.com/icons/438559/github_repository_icon#size=128
+        https://www.iconfinder.com/icons/104461/twitter_icon#size=128
+        -->
+        <div class="featurette" id="connect">       
+            <hr class="featurette-divider">
+            <br>
+            <br>
+            <div class="container">
+                <div class="row social-media-row">
+                	<div class="col-md-1 social-media">
+                        <a href="mailto:guyton.justin@gmail.com" target="_top">
+                            <img class="featurette-image img-circle social-media" src="Images/email_icon.png">
+                        </a>
+                    </div>
+                    <div class="col-md-1 social-media">
+                        <a href="#">
+                            <img class="featurette-image img-circle social-media" src="Images/twitter_icon_black.png">
+                        </a>
+                    </div>
+                    <div class="col-md-1 social-media">
+                        <a href="https://github.com/JGuyton501">
+                            <img class="featurette-image img-circle social-media" src="Images/github_icon.png">
+                        </a>
+                    </div>
+                    <div class="col-md-1 social-media">
+                        <a href="https://www.linkedin.com/in/guytonjustin501">
+                            <img class="featurette-image img-circle social-media" src="Images/linkedin_icon.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>&copy; 2016, Justin Guyton, All rights reserved. Front-End Web Developer</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
 </html>
