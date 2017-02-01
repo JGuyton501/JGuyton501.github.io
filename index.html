@@ -1,281 +1,937 @@
 <!DOCTYPE html>
-<html ng-app="mainModule">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JTG</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="images/jtg-icon.png" >
 
-    <title>Justin Guyton</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/font/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/libs/materialize/css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="assets/css/bootstrap.css" media="screen,projection" />
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/animate.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="assets/libs/sweetalert/sweet-alert.css" media="screen,projection" />
 
-    <!-- Custom CSS -->
-    <link href="css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/libs/owl-carousel/owl.carousel.css" media="screen,projection" />
+  <link rel="stylesheet" href="assets/libs/owl-carousel/owl.transitions.css" media="screen,projection" />
+  <link rel="stylesheet" href="assets/libs/owl-carousel/owl.theme.css" media="screen,projection" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Choose your default colors -->
+  <link rel="stylesheet" href="assets/css/colors/color1.css">
+  <!-- <link rel="stylesheet" href="assets/css/colors/color2.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color3.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color4.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color5.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color6.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color7.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/colors/color8.css"> -->
+
+  <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+  <![endif]-->
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+  <!-- Preloader --> 
+    <div id="preloader">
+      <div class="loader">
+            <svg class="circle-loader" height="50" width="50">
+              <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
+            </svg>
+        </div>    
+    </div><!--preloader end-->
 
-                <a class="navbar-brand" href="#" style="float:left"><img src="Images/jtg_icon.png" style="height:40px; width:40px;" alt="JTG"></a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav float_center" >
-                    <li>
-                        <a href="#about" title="About"><img src="Images/about_icon.png" style="height:40px; width:40px;" alt="About"></a>
+  <!-- Main Container -->
+  <main id="app" class="main-section">
+    <!-- header navigation start -->
+    <header id="navigation" class="root-sec white nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="nav-inner">
+              <nav class="primary-nav">
+                <div class="clearfix nav-wrapper">
+                  <a href="#home" class="left brand-logo menu-smooth-scroll" data-section="#home"><img src="images/jtg_icon.png" alt="">
+                  </a>
+                  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                  <ul class="right static-menu">
+                    <li class="search-form-li">
+                      <a id="initSearchIcon" class=""><i class="mdi-action-search"></i> </a>
+                      <div class="search-form-wrap hide">
+                        <form action="#" class="">
+                          <input type="search" class="search">
+                          <button type="submit"><i class="mdi-action-search"></i>
+                          </button>
+                        </form>
+                      </div>
                     </li>
                     <li>
-                        <a href="#jtg_resume" title="Resume"><img src="Images/resume_icon.png" style="height:40px; width:40px;" alt="Resume"></a>
+                      <a class="dropdown-button blog-submenu-init" href="#!" data-activates="dropdown1">
+                        <i class="mdi-navigation-more-vert right"></i>
+                      </a>
                     </li>
-                    <li>
-                        <a href="#connect" title="Connect"><img src="Images/connect_icon.png" style="height:40px; width:40px;" alt="Connect"></a>
-                    </li>
-                </ul>            
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+                  </ul>
+                  <ul class="inline-menu side-nav" id="mobile-demo">
 
-    <!-- Full Width Image Header -->
-    <header class="header-image">
-        <div class="headline">
-            <div class="container">
-                <h1>Justin Guyton</h1>
-                <h2>Front-End and Java Developer</h2>
+                  <!-- Mini Profile // only visible in Tab and Mobile -->
+                    <li class="mobile-profile">
+                     <div class="profile-inner">
+                        <div class="pp-container">
+                            <img src="images/person.png" alt="">
+                        </div>
+                        <h3>Justin Guyton</h3>
+                        <h5>Full Stack Developer</h5>
+                      </div>
+                    </li><!-- mini profile end-->
+
+
+                    <li><a href="#about" data-section="#about" class="menu-smooth-scroll"><i class="fa fa-user fa-fw"></i>About Me</a>
+                    </li>
+                    <li><a href="#resume" data-section="#resume" class="menu-smooth-scroll"><i class="fa fa-file-text fa-fw"></i>Resume</a>
+                    </li>
+                    <li><a href="#portfolio" data-section="#portfolio" class="menu-smooth-scroll"><i class="fa fa-briefcase fa-fw"></i>Portfolio</a>
+                    </li>
+                    <li><a href="#team" data-section="#team" class="menu-smooth-scroll"><i class="fa fa-users fa-fw"></i>Team</a>
+                    </li>
+                    <li><a href="#testimonial" data-section="#testimonial" class="menu-smooth-scroll"><i class="fa fa-comments fa-fw"></i>Testimonial</a>
+                    </li>
+                    <!-- <li><a href="#blog" data-section="#blog" class="menu-smooth-scroll"><i class="fa fa-pencil fa-fw"></i>Blog</a>
+                    </li>-->
+                    <!--<li><a href="#contact" data-section="#contact" class="menu-smooth-scroll"><i class="fa fa-paper-plane fa-fw"></i>Contact</a>-->
+                    </li>
+                  </ul>
+                  <!-- <ul id="dropdown1" class="inline-menu submenu-ul dropdown-content">
+                    <li>Home</li>
+                    <li><a href="blog.html">All Blog</a>
+                    </li>
+                    <li><a href="blog-with-sidebar.html">Blog with Sidebar</a>
+                    </li>
+                    <li><a href="single.html">Single Blog</a>
+                    </li>
+                  </ul> -->
+
+                </div>
+              </nav>
             </div>
+          </div>
         </div>
+      </div>
+      <!-- .container end -->
     </header>
+    <!-- #header  navigation end -->
 
-    <!-- Page Content -->
-    <div class="container">
-        <div class="aboutMe" id="about">
-            <br>
-            <br>
-            <h1>About Me</h1>
-            <img class="img-circle profile-img pull-left" src="Images/profile_pic.jpg">
-            
-            <p class="lead">
-                <b>College:</b> Washington University in St. Louis <br>
-                <b>Degree program:</b> Bachelor of Science in Computer Science (BSCS) <br>
-                <b>Hometown: </b> Little Rock, Arkansas <br>
-            </p>
-
-            <p class="lead">
-                I am a developer and entrepreneur at heart. I enjoy continuous learning and my lifestyle is not bounded to nine to five. Upon coming to college, I discovered my passion for web development. I immediately followed my passion to web development internships, the creation of websites for family and friends and freelancing. When I am not developing websites, you will catch me either playing either video games or pool. 
-            </p>
-        </div>
-
-        <div class="techSkills">
-            <h1>Technical Skills </h1>
-            <br>
-            <div class="techSkillsContent">
-                <div class="progress">
-                    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
-                        HTML
-                    </div>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                        JavaScript
-                    </div>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
-                        CSS
-                    </div>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                        Java
-                    </div>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                        PHP
-                    </div>
-                </div>
+    <!-- Home Section start -->
+    <section id="home" class="scroll-section root-sec grey lighten-5 home-wrap">
+      <div class="sec-overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-inner">
+                  <div class="center-align home-content">
+                    <h1 class="home-title">HI! I'm <span>Justin Guyton</span></h1>
+                    <h2 class="home-subtitle">Full Stack Developer from St. Louis, Missouri</h2>
+                    <a href="#contact" class="hire-me-btn btn waves-effect waves-light btn-large brand-bg white-text regular-text">Hire Me <i class="mdi-content-send left"></i>
+                    </a>
+                  </div>
+              </div>
             </div>
+          </div>
+        </div>
+        <!-- .container end -->
+        <div class="section-call-to-area">
+          <div class="container">
             <div class="row">
-                <table class="col-md-7">
-                    <tr>
-                        <td>Languages: </td>
-                        <td>Java, PHP, JavaScript
-                    </tr>
-                    <tr>
-                        <td>Templating Engines: </td>
-                        <td>Dust.js, Underscore.js </td>
-                    </tr>
-                    <tr>
-                        <td>Libraries/Frameworks: </td>
-                        <td>jQuery, Bootstrap </td>
-                    </tr>
-                    <tr>
-                        <td>Deployment/Management: </td>
-                        <td>Git, GitHub, SourceTree, BitBucket, Heroku </td>
-                    </tr>
-                    <tr>
-                        <td>Methodologies: </td>
-                        <td>Agile, Scrum</td>
-                    </tr>
-                </table>
-                <div class="col-md-5">
-                    <img src="Images/icons.png" style="height:350px; width:350px;">
-                </div>
+              <a href="#about" class="btn-floating btn-large button-middle call-to-about section-call-to-btn animated btn-up btn-hidden" data-section="#about">
+                <i class="mdi-navigation-expand-more"></i>
+              </a>
             </div>
+          </div>
+          <!-- .container end -->
         </div>
+      </div>
+    </section>
+    <!-- #home Section end -->
 
-        <div class="resumeContent" id="jtg_resume">
-            <section>
-                <div class="sectionTitle">
-                    <h1>Work Experience</h1>
-                </div>
-                
-                <div class="sectionContent">
-                    <article>
-                        <h2><strong>Student Technician</strong> - Student Technology Services, Washington University</h2>
-                        <p class="subDetails"><em>St Louis, Missouri</em> - January 2015 - Present</p>
-                        <p>Troubleshoot computer viruses, hard drive corruption, hard drive failure, wireless network issues, and other personal computer problems of the Washington University students and staff</p>
-                    </article>
-                    
-                    <article>
-                        <h2><strong>Application Developer Intern</strong> - Principal Financial Group</h2>
-                        <p class="subDetails"><em>Des Moines, Iowa</em> - May 2016 - August 2016</p>
-                        <p>Integrate to a Spring framework and Agile development environment on a team of full-time employees</p>
-                        <p>Assist with web development projects (coding, content management interactive web design, etc.) using languages HTML, CSS, JavaScript, and Dust.js </p>
-                        <p>Create and support software application through analysis, coding, testing, debugging, implementation and/maintenance using Java </p>
-                    </article>
-                    
-                    <article>
-                        <h2><strong>Front-End Web Developer Supervisor</strong> - SuperInterns.com</h2>
-                        <p class="subDetails"><em>Virtual</em> - May 2016 - August 2016</p>
-                        <p>Supervise a web design team of 8 virtual interns saving the company over $24,000 in labor cost</p>
-                        <p>Design and developed webpages meeting on business requirements using HTML, CSS, JavaScript, WordPress, and Bootstrap</p>
-                        <p>Assist in building a sandbox environment to prevent untested code from going into production</p>
-                        <p>Occasionally lead weekly Supervisor, IT, and Web Designer team meetings consisting of approximately 10 individuals</p>
-                        <p>Identified current issues with the company&rsquo;s site and increased traffic by 100%</p>
-                    </article>
+    <!-- About Section start -->
+    <section id="about" class="scroll-section root-sec padd-tb-60 grey lighten-5 about-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="clearfix about-inner">
 
-                    <article>
-                        <h2><strong>Data Analyst Intern</strong> - Office of Provost, Washington University</h2>
-                        <p class="subDetails"><em>St Louis, Missouri</em> - May 2015 - August 2015</p>
-                        <p>Collected and interpreted publicly available data from NSF, NIH, DARPA, and DoD</p>
-                        <p>Built a data clustering web application to a analyze the geolocations of a variety awards</p>
-                        <p>Analyzed data gathered from the Association of American Universities peer institutions to aid in developing a new Learning Management System for the university</p>
-                    </article>
-                </div>
-                <div class="clear"></div>
-            </section>
-
-            <section>
-                <div class="sectionTitle">
-                    <h1>Leadership and Volunteer</h1>
-                </div>
-
-                <div class="sectionContent">
-                    <article>
-                        <h2><strong>Learning 2 Live Mentor</strong> - Washington University</h2>
-                        <p class="subDetails"><em>St Louis, Missouri</em> - September 2014 - Present</p>
-                        <p>Committed to guide, support, and befriend the students enrolled in the program to help them develop and reach positive academic, career, and personal goals</p>
-                    </article>
-
-                    <article>
-                        <h2><strong>Mentor</strong> - College Access Mentoring</h2>
-                        <p class="subDetails"><em>Washington University</em> - September 2015 - Present</p>
-                        <p>Paired with another WashU student meeting with 5 East St. Louis High School students once every week to mentor students based on a set curriculum assisting with professional growth and the college admission process</p>
-                    </article>
-
-                    <article>
-                        <h2><strong>Mentor</strong> - Hands Up United</h2>
-                        <p class="subDetails"><em>St Louis Missouri</em> - July 2015 - August 2015</p>
-                        <p>Assisted approximately 15 students in learning to code using HTML and CSS to develop a site for clients and themselves</p>
-                    </article>
-                </div>
-                <div class="clear"></div>
-            </section>
-
-            <section>
-                <div class="sectionTitle">
-                    <h1>Honors and Awards</h1>
-                </div>
-
-                <div class="sectionContent">
-                    <article>
-                        <br>
-                        <p>1st Place at <a href="http://techli.com/2015/06/globalhack-iv-j-rod-the-prodigy-wins-1st-place/">GlobalHack IV</a> </p>
-                        <p>1st Place at NSBE Annual Hackathon 2014 </p>
-                        <p>McKelvey 2014 Scholar</p>
-                    </article>
-                </div>
-                <div class="clear"></div>
-            </section>
-        </div>
-
-        <div id="connect">       
-            <br>
-            <br>
-            <div class="container">
-                <div class="row social-media-row">
-                    <div class="col-md-1 social-media icon1">
-                        <a href="mailto:guyton.justin@gmail.com" target="_top">
-                            <img class="img-circle social-media" src="Images/email_icon.png">
-                        </a>
-                    </div>
-                    <div class="col-md-1 social-media icon2">
-                        <a href="#">
-                            <img class="img-circle social-media" src="Images/twitter_icon_black.png">
-                        </a>
-                    </div>
-                    <div class="col-md-1 social-media icon3">
-                        <a href="#">
-                            <img class="img-circle social-media" src="Images/github_icon.png">
-                        </a>
-                    </div>
-                    <div class="col-md-1 social-media icon4">
-                        <a href="https://www.linkedin.com/in/guytonjustin501">
-                            <img class="img-circle social-media" src="Images/linkedin_icon.png">
-                        </a>
-                    </div>
-                </div>
+            <div class="col-sm-12 col-md-4">
+              <div class="person-about">
+                <h3 class="about-subtitle">My Story</h3>
+                <p>Hello, I’m a Full Stack Developer from St. Louis, MO. I am currently in my Junior year studying Computer Science at WashU. <br />
+                I am a developer and entrepreneur at heart. I enjoy continuous learning and my lifestyle is not bounded to nine to five. When I am not developing websites, you will catch me either playing either video games or pool. </p>
+                <a class="waves-effect waves-light btn-large brand-bg white-text"><i class="mdi-content-archive left"></i> Download Resume</a>
+              </div>
             </div>
-        </div>
+            <!-- about me description -->
 
-        <!-- Footer -->
-        <footer>
+            <div class="col-sm-6 col-md-4">
+              <div class="person-img wow fadeIn">
+                <img class="z-depth-1" src="https://scontent-dft4-2.xx.fbcdn.net/v/t31.0-8/15385384_10211712947844160_952398655129177508_o.jpg?oh=2af5126467f637e2e205e1dd877f8c35&oe=594869C2" alt="">
+              </div>
+            </div>
+            <!-- about me image -->
+
+            <div class="col-sm-6 col-md-4">
+              <div class="person-info">
+                <h3 class="about-subtitle">Personal Information</h3>
+                <h5><span>Name :</span> Justin Guyton</h5>
+                <h5><span>College :</span> Washington University in St. Louis</h5>
+                <h5><span>Degree :</span> Bachelor of Science in Computer Science (BSCS)</h5>
+                <h5><span>Email :</span> guyton.justin@gmail.com</h5>
+                <h5><span>City :</span> St. Louis, Missouri</h5>
+              </div>
+
+              <div class="about-social">
+                <ul>
+                  <li>
+                    <a href="https://www.facebook.com/justin.guyton.779" class="btn-floating waves-effect waves-light white"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/JGuyton0" class="btn-floating waves-effect waves-light white"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/guytonjustin501" class="btn-floating waves-effect waves-light white"><i class="fa fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JGuyton501" class="btn-floating waves-effect waves-light white"><i class="fa fa-github"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- about me info -->
+
+          </div>
+        </div>
+      </div>
+      <!-- .container end -->
+    </section>
+    <!-- #about Section end -->
+
+    <!-- Resume Section start -->
+    <section id="resume" class="scroll-section ">
+      <section id="skill" class="root-sec white skill-wrap">
+      <div class="sec-overlay">
+        <div class="container">
+          <div class="row">
+            <div class="clearfix skill-inner">
+              <div class="col-sm-12 col-md-3">
+                <div class="skill-left">
+                  <h2 class="title">Skills</h2>
+                  <p class="regular-text">Developing skills is a never ending process.</p>
+                </div>
+              </div>
+
+              <!-- skills container -->
+              <div class="col-sm-12 col-md-6 col-md-offset-1">
+                <div class="skill-right">
+                  <div id="skillSlider" class="clearfix skill-graph">
+
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="70%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">JavaScript</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">70%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="60%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Java</span>
+                              <div class="hr-wrap">
+
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">60%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="50%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">PHP</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">50%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="80%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">HTML</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">80%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="75%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">CSS</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">75%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="50%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Swift</span>
+                              <div class="hr-wrap">
+
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">50%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+
+                    <!-- single skill -->
+                    <div class="single-skill">
+                      <div class="after-li">
+                        <div class="singel-hr">
+                          <div class="singel-hr-inner" data-height="70%">
+                            <div class="skill-visiable">
+                              <span class="skill-title">Wordpress</span>
+                              <div class="hr-wrap">
+                                <div class="hrc"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="skill-count">70%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /single skill-->
+                  </div>
+                </div>
+              </div>
+              <!-- /skills container -->
+            </div>
+          </div>
+          <div class="btn-wrapp skl-ctrl">
+            <a class="btn-floating waves-effect waves-light btn-large brand-bg white-text go go-left"><i class="mdi-navigation-chevron-left "></i></a>
+            <a class="btn-floating waves-effect waves-light btn-large brand-bg white-text go go-right"><i class="mdi-navigation-chevron-right "></i></a>
+          </div>
+        </div>
+      </div>
+        <!-- .container end -->
+      </section>
+
+      <section id="experience" class="root-sec padd-tb-120 brand-bg experience-wrap">
+        <div class="container">
+          <div class="row">
+            <div class="experience-inner">
+              <div class="col-sm-12 col-md-10 card-box-wrap">
+                <div class="row">
+                  <div class="clearfix section-head experience-text">
+                    <div class="col-sm-12">
+                      <h2 class="title">Experience</h2>
+                      <p class="regular-text">Life is a journey with problems to solve, lessons to learn, but most of all, experience to enjoy.</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="overflow-hidden">
+                      <div class="row">
+                        <div id="experienceSlider" class="clearfix card-element-wrapper">
+                          <div class="col-sm-4 cold-xs-12 single-card-box wow fadeInUpSmall" data-wow-duration=".7s">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">January 2015 - Present</h2>
+                                <div class="valign-wrapper card-img-wrap">
+                                  <img class="activator" src="https://sites.wustl.edu/publicaffairs/files/2015/07/Washington_University_SealRGB200-oqtfje.png" alt="" style="width: 400px; height: 300px">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">Student Technician<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>Washington University in St. Louis</p>
+                              </div>
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">Student Technician<i class="mdi-navigation-close right"></i></span>
+                                  <p>Washington University in St. Louis</p>
+                                </div>
+                                <p class="rev-content">
+                                  Troubleshoot computer viruses, hard drive corruption, hard drive failure, wireless network issues, and other personal computer problems of the Washington University students and staff
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-4 cold-xs-12 single-card-box wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration=".7s">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">May 2016 - August 201</h2>
+                                <div class="valign-wrapper card-img-wrap">
+                                  <img class="activator" src="http://www.gannett-cdn.com/-mm-/fe87a402487c34bb50728dfc5586a6a06573c318/c=72-0-426-473&r=537&c=0-0-534-712/local/-/media/2016/03/09/IAGroup/DesMoines/635931295510494114-principal-logo-3.PNG" alt="" style="width: 400px; height: 300px">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">Application Developer<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>Principal Financial Group</p>
+                              </div>
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">Application Developer<i class="mdi-navigation-close right"></i></span>
+                                  <p>Principal Financial Group</p>
+                                </div>
+                                <p class="rev-content">Integrate to a Spring framework and Agile development environment on a team of full-time employees
+                                </p>
+                                <p class="rev-content">Assist with web development projects (coding, content management interactive web design, etc.) using languages HTML, CSS, JavaScript, and Dust.js 
+                                </p>
+                                <p class="rev-content">Create and support software application through analysis, coding, testing, debugging, implementation and/maintenance using Java 
+                                </p> 
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-4 cold-xs-12 single-card-box wow fadeInUpSmall" data-wow-delay=".4s" data-wow-duration=".7s">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">May 2016 - August 2016</h2>
+                                <div class="valign-wrapper card-img-wrap">
+                                  <img class="activator" src="https://biz.prlog.org/Super_Morgan/logo.png" alt="" style="width: 400px; height: 300px">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">Front-End Web Developer Supervisor<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>Superinterns.com</p>
+                              </div>
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">Front-End Web Developer Supervisor<i class="mdi-navigation-close right"></i></span>
+                                  <p>Superinterns.com</p>
+                                </div>
+                                <p class="rev-content">
+                                  Supervise a web design team of 8 virtual interns saving the company over $24,000 in labor cost</p>
+                                <p class="rev-content">Design and developed webpages meeting on business requirements using HTML, CSS, JavaScript, WordPress, and Bootstrap</p>
+                                <p class="rev-content">Assist in building a sandbox environment to prevent untested code from going into production</p>
+                                <p class="rev-content">Occasionally lead weekly Supervisor, IT, and Web Designer team meetings consisting of approximately 10 individuals</p>
+                                <p class="rev-content">Identified current issues with the company&rsquo;s site and increased traffic by 100% 
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-4 cold-xs-12 single-card-box">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">May 2015 - August 2015</h2>
+                                <div class="valign-wrapper card-img-wrap">
+                                  <img class="activator" src="https://sites.wustl.edu/publicaffairs/files/2015/07/Washington_University_SealRGB200-oqtfje.png" alt="" style="width: 400px; height: 300px">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">Data Analyst Intern<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>Washington University in St. Louis</p>
+                              </div>
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">Data Analyst Intern<i class="mdi-navigation-close right"></i></span>
+                                  <p>Washington University in St. Louis</p>
+                                </div>
+                                <p class="rev-content">
+                                  Collected and interpreted publicly available data from NSF, NIH, DARPA, and DoD</p>
+                                <p class="rev-content">Built a data clustering web application to a analyze the geolocations of a variety awards</p>
+                                <p class="rev-content">Analyzed data gathered from the Association of American Universities peer institutions to aid in developing a new Learning Management System for the university
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrapp exp-ctrl">
+                <a class="btn-floating waves-effect waves-light btn-large white go go-left"><i class="mdi-navigation-chevron-left brand-text"></i></a>
+                <a class="btn-floating waves-effect waves-light btn-large white go go-right"><i class="mdi-navigation-chevron-right brand-text"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="root-sec grey lighten-5 padd-tb-120 education-wrap">
+        <div class="container">
+          <div class="row">
+            <div class="education-inner">
+              <div class="col-sm-12 col-md-10 card-box-wrap">
+                <div class="row">
+                  <div class="clearfix section-head education-text">
+                    <div class="col-sm-12">
+                      <h2 class="title">education</h2>
+                      <p class="regular-text">"Education is the most powerful weapon we can use to change the world." - Nelson Mandela</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="overflow-hidden">
+                      <div class="row">
+                        <div id="educationSlider" class="clearfix card-element-wrapper">
+
+                        <!-- single education -->
+                          <div class="col-sm-4 single-card-box wow fadeInUpSmall" data-wow-duration=".7s">
+                            <div class="card">
+                              <div class="card-image waves-effect waves-block waves-light">
+                                <h2 class="left-align card-title-top">2014 - Present</h2>
+                                <div class="card-img-wrap">
+                                  <img class="activator" src="https://www.qbwiki.com/w/images/e/eb/Wustl-logo.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator brand-text">Bachelor of Science in Computer Science (BSCS)<i class="mdi-navigation-more-vert right"></i></span>
+                                <p>Washington University in St. Louis</p>
+                              </div>
+                              <!-- Reveal content-->
+                              <div class="card-reveal">
+                                <div class="rev-title-wrap">
+                                  <span class="card-title activator brand-text">Bachelor of Science in Computer Science (BSCS)<i class="mdi-navigation-close right"></i></span>
+                                  <p>Washington University in St. Louis</p>
+                                </div>
+                                <p class="rev-content">
+                                  Home away from home building my knowledge within the computer science career field.
+                                </p>
+                              </div>
+                            </div>
+                          </div> <!-- single education end -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-wrapp edu-ctrl">
+                <a class="btn-floating waves-effect waves-light btn-large brand-bg go go-left"><i class="mdi-navigation-chevron-left"></i></a>
+                <a class="btn-floating waves-effect waves-light btn-large brand-bg go go-right"><i class="mdi-navigation-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- #resume Section end -->
+
+    <!-- Portfolio Section start 
+    <section id="portfolio" class="scroll-section root-sec white portfolio-wrap">
+      <div class="padd-tb-120 brand-bg portfolio-top">
+        <div class="portfolio-inner">
+          <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <p>&copy; 2016, Justin Guyton, All rights reserved.</p>
-                </div>
+              <div class="col-sm-12">
+                <h2 class="title">PORTFOLIO</h2>
+                <ul class="inline-menu clearfix portfolio-category" id="portfolio-msnry-sort">
+                  <li class="active"><a href="#" data-target="*">All</a>
+                  </li>
+                  <li><a href="#" data-target=".category-1">Art</a>
+                  </li>
+                  <li><a href="#" data-target=".category-2">Accessories</a>
+                  </li>
+                  <li><a href="#" data-target=".category-3">Design</a>
+                  </li>
+                  <li><a href="#" data-target=".category-4">Fashion</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </footer>
+          </div>
+        </div>
+ 
+       </div>
+      <div id="portfolioModal" class="modal white">
+        <div class="model-img"></div>
+        <div class="modal-content">
+          <h2 class="title">Lorem ipsum dolor sit fugit dolore.</h2>
+          <p class="m-content">A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior.</p>
+        </div>
 
+        <div class="modal-footer">
+          <a href="#" target="_blank" class="waves-effect btn-flat brand-text modal-action">Live Demo</a>
+          <a href="#" class="waves-effect btn-flat brand-text modal-action modal-close">cancel</a>
+        </div>
+      </div>
+
+      <div class="portfolio-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <ul class="clearfix protfolio-item" id="protfolio-msnry">
+              
+                <li class="single-port-item category-1 category-3">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#"> <
+
+                    <div class="protfolio-image">
+                      <img src="http://placehold.it/390x280" alt="portfolio">  
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">item name</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+
+
+
+                <li class="single-port-item category-2 category-1">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#">
+                    <div class="protfolio-image">
+                      <img src="http://placehold.it/390x280" alt="portfolio">
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">item name</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+
+
+
+                <li class="single-port-item category-1 category-2">
+                  <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#">
+                    <div class="protfolio-image">
+                      <img src="http://placehold.it/390x280" alt="portfolio">
+                      <div class="protfolio-content waves-effect waves-block waves-light">
+                        <div class="protfolio-content__inner">
+                          <h2 class="p-title">item name</h2>
+                        </div>
+                      </div>
+                      <div class="p-overlay"></div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <a id="portfolio-item-loader" href="#" class="btn-floating btn-large waves-effect waves-light brand-bg"><i class="mdi-content-add"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     #portfolio Section end -->
+
+    
+
+    <!-- Funfacts Section end -->
+    <section id="funfacts" class="root-sec grey lighten-5 funfact-wrap">
+    <div class="sec-inner padd-tb-120">
+      <div class="container">
+        <div class="row">
+          <div class="funfact-inner">
+            <div class="col-sm-4 funfact-box">
+              <div class="center-align card-panel white">
+                <div class="feature-box-outer">
+                  <div class="funfact-box-inner">
+                    <div class="clearfix ">
+                      <i class="mdi-editor-insert-emoticon"></i>
+                      <span class="num countNumb">3</span>
+                    </div>
+                    <div class="context">Hackathons Placed or Won</div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- ./single fun fact box -->
+            <div class="col-sm-4 funfact-box">
+              <div class="center-align card-panel white">
+                <div class="feature-box-outer">
+                  <div class="funfact-box-inner">
+                    <div class="clearfix ">
+                      <i class="mdi-action-wallet-travel"></i>
+                      <span class="num countNumb">35</span>
+                    </div>
+                    <div class="context">Clases Taken</div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- ./single fun fact box -->
+            <div class="col-sm-4 funfact-box">
+              <div class="center-align card-panel white">
+                <div class="feature-box-outer">
+                  <div class="funfact-box-inner">
+                    <div class="clearfix ">
+                      <i class="mdi-action-wallet-giftcard"></i>
+                      <span class="num countNumb">4</span>
+                    </div>
+                    <div class="context">Years Developing</div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- ./single fun fact box -->
+          </div>
+        </div>
+
+      </div>  <!-- .container end -->
     </div>
-    <!-- /.container -->
+    </section>
+    <!-- #funfacts Section end -->
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <!-- Testimonial Section end -->
+    <section id="testimonial" class="scroll-section root-sec brand-bg padd-tb-120 testimonial-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="testimonial-inner">
+            <div class="col-sm-12 col-md-10 card-box-wrap">
+              <div class="row">
+                <div class="clearfix section-head testimonial-text">
+                  <div class="col-sm-12">
+                    <h2 class="title">testimonial</h2>
+                    <p class="regular-text">Listen to what these people has to say...</p>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="overflow-hidden">
+                    <div class="row">
+                      <div id="testimonialSlider" class="clearfix card-element-wrapper">
+                        <div class="col-sm-6 single-card-box wow fadeInUpSmall" data-wow-duration=".7s">
+                          <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <div class="card-img-wrap">
+                                <img class="activator" src="http://www.freeiconspng.com/uploads/female-icon-11.jpg" alt="">
+                                <p class="saying-about">Justin is strong administratively and can always be depended on to complete tasks on time and well</p>
+                              </div>
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator brand-text">Kayla -</span>
+                              <a href="#">Residential College Director, WashU.</a>
+                            </div>
+                          </div>
+                        </div> <!-- ./single testimonial box -->
+                        <div class="col-sm-6 single-card-box wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration=".7s">
+                          <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <div class="card-img-wrap">
+                                <img class="activator" src="http://www.freeiconspng.com/uploads/male-icon-4.jpg" alt="">
+                                <p class="saying-about">Justin takes ownership of problems and works hard to solve problems. He is performing and producing results similar to a developer with years of experience. </p>
+                              </div>
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator brand-text">Joel -</span>
+                              <a href="#">Application Developer, Principal Financial Group</a>
+                            </div>
+                          </div>
+                        </div> <!-- ./single testimonial box -->
+                      </div> <!-- #testimonialSlider end -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-wrapp tmo-ctrl">
+              <a class="btn-floating waves-effect waves-light btn-large white go go-left"><i class="mdi-navigation-chevron-left brand-text"></i></a>
+              <a class="btn-floating waves-effect waves-light btn-large white go go-right"><i class="mdi-navigation-chevron-right brand-text"></i></a>
+            </div>
+          </div>
+        </div>
+      </div> <!-- ./container end -->
+    </section>
+    <!-- #testimonial Section end -->
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Blog Section end -->
+    <!-- <section id="blog" class="scroll-section root-sec grey lighten-5 padd-tb-120 blog-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="blog-inner">
+            <div class="col-sm-12 card-box-wrap">
+              <div class="row">
+                <div class="clearfix section-head blog-text">
+                  <div class="col-sm-10">
+                    <h2 class="title">Blog</h2>
+                    <p class="regular-text">A Web page that serves as a publicly accessible personal journal for an individual. Typically updated daily, blogs often reflect the personality of the author.</p>
+                  </div>
+                </div>
+                <div class="clearfix card-element-wrapper" id="blog-posts">
+                  <article class="col-sm-6 col-md-4 single-card-box single-post">
+                    <div class="card wow fadeInUpSmall" data-wow-duration=".7s">
+                      <div class="card-image">
+                        <div class="card-img-wrap">
+                          <div class="blog-post-thumb waves-effect waves-block waves-light">
+                            <a href="single.html"><img class="activator" src="http://placehold.it/350x200" alt="">
+                            </a>
+                          </div>
+                          <div class="post-body">
+                            <a href="single.html" class="post-title-link brand-text"><h2 class="post-title">Awesome Post Title</h2></a>
+                            <p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix card-content">
+                        <a href="#" class="left js-favorite" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">15</span></a>
+                        <a href="single.html" class="brand-text right waves-effect">Read More</a>
+                      </div>
+                    </div>
+                  </article> 
+                  <article class="col-sm-6 col-md-4  single-card-box single-post">
+                    <div class="card wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration=".7s">
+                      <div class="card-image">
+                        <div class="card-img-wrap">
+                          <div class="blog-post-thumb waves-effect waves-block waves-light">
+                            <a href="single.html"><img class="activator" src="http://placehold.it/350x200" alt="">
+                            </a>
+                          </div>
+                          <div class="post-body">
+                            <a href="single.html" class="post-title-link brand-text"><h2 class="post-title">An Image Post</h2></a>
+                            <p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix card-content">
+                        <a href="#" class="left js-favorite active" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">23</span></a>
+                        <a href="single.html" class="brand-text right waves-effect">Read More</a>
+                      </div>
+                    </div>
+                  </article> 
+                  <article class="col-sm-6 col-md-4 single-card-box single-post">
+                    <div class="card wow fadeInUpSmall" data-wow-delay=".4s" data-wow-duration=".7s">
+                      <div class="card-image">
+                        <div class="card-img-wrap">
+                          <div class="blog-post-thumb waves-effect waves-block waves-light">
+                            <a href="single.html"><img class="activator" src="http://placehold.it/350x200" alt="">
+                            </a>
+                          </div>
+                          <div class="post-body">
+                            <a href="single.html" class="post-title-link brand-text"><h2 class="post-title">Another Image Post</h2></a>
+                            <p class="post-content">In consectetuer turpis ut velit. Sed lectus. Ut varius tincidunt libero. Vivamus euismod mauris. Vestibulum fringilla pede sit amet augue. Ut varius tincidunt libero. Pellentesque dapibus hendrerit tortor. </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix card-content">
+                        <a href="#" class="left js-favorite" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">17</span></a>
+                        <a href="single.html" class="brand-text right waves-effect">Read More</a>
+                      </div>
+                    </div>
+                  </article> 
+                </div>
+                <div class="clearfix left-align">
+                  <div class="col-sm-12">
+                    <a href="blog.html" class="waves-effect waves-light btn-large load-more">See More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- #blog Section end -->
 
+    <!-- Footer Section end -->
+    <footer id="footer" class="root-sec white root-sec footer-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="clearfix footer-inner">
+              <ul class="left social-icons">
+                <li><a href="https://www.facebook.com/justin.guyton.779" class="tooltips tooltipped facebook" data-position="top" data-delay="50" data-tooltip="Facebook"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/guytonjustin501" class="tooltips tooltipped linkedin" data-position="top" data-delay="50" data-tooltip="Linkdin"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li><a href="https://twitter.com/JGuyton0" class="tooltips tooltipped twitter" data-position="top" data-delay="50" data-tooltip="Twitter"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li><a href="https://github.com/JGuyton501" class="tooltips tooltipped github" data-position="top" data-delay="50" data-tooltip="Github"><i class="fa fa-github"></i></a>
+                </li>
+              </ul> <!-- ./social icons end -->
+              <div class="right copyright">
+                <p>MaterialX &copy;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- ./container end-->
+    </footer>
+    <!-- #footer end -->
+
+  </main>
+  <!-- Main Container end-->
+
+
+  <!-- JavaScripts -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="assets/js/detectmobilebrowser.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/waypoints.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/jquery.nicescroll.min.js"></script>
+  <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+  <script src="assets/js/gmaps.js"></script>
+  <script src="assets/libs/owl-carousel/owl.carousel.min.js"></script>
+  <script src="assets/libs/materialize/js/materialize.min.js"></script>
+  <script src="assets/libs/jwplayer/jwplayer.js"></script>
+  <script src="assets/libs/sweetalert/sweet-alert.min.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
