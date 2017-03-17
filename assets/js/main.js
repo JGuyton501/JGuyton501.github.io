@@ -241,7 +241,7 @@ $(document).ready(function($){
 	// Animate scrolling on hire me button
     $('.hire-me-btn').on('click', function(e) {
         e.preventDefault();
-        $('html, body').animate({scrollTop: $("#contact").offset().top}, 500);
+        $('html, body').animate({scrollTop: $("#about").offset().top}, 500);
     });
 
 
