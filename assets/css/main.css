@@ -580,7 +580,7 @@ header.nav.hide-menu {
  ----------------------------------- */
 
 #home {
-    background: url('../../images/home-bg.jpg') no-repeat fixed center center / cover;
+    background: url('../../images/main.png') no-repeat fixed center center / cover;
 }
 
 #home .sec-overlay {
@@ -715,7 +715,7 @@ header.nav.hide-menu {
  ----------------------------------- */
 
 #skill {
-    background: url('../../images/skills-bg.jpg') no-repeat scroll center center / cover;
+    background: url('../../images/skills.png') no-repeat scroll center center / cover;
 }
 
 #skill .sec-overlay {
@@ -1098,16 +1098,17 @@ header.nav.hide-menu {
 .portfolio-wrap .modal {
     padding: 0;
     max-height : 85%;
-    width: 550px;
+    width: 900px;
 }
 
 .modal .model-img {
-    padding: 5px 5px 0 5px;
+    padding: 5px 5px 0px 5px;
     margin-bottom: 25px;
+    text-align: center;
 }
 
 .modal .model-img img {
-    width: 100%;
+    width: 70%;
     height: auto;
 }
 .modal .title {
@@ -1324,7 +1325,7 @@ header.nav.hide-menu {
  ----------------------------------- */
 
 #funfacts {
-    background: url('../../images/fun-facts-bg.jpg') no-repeat scroll center center / cover;
+    background: url('../../images/funfact.jpg') no-repeat scroll center center / cover;
 }
 
 #funfacts .sec-inner {
